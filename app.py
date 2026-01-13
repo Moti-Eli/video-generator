@@ -279,13 +279,13 @@ def main():
         
         duration = st.selectbox(
             "אורך (שניות)",
-            options=[4, 6, 8],
-            index=2,
+            options=[5, 7, 10],  # אפשרויות חדשות
+            index=0,             # ברירת מחדל 5 שניות
             disabled=(mode == "interpolation"),
             help="Interpolation תמיד 8 שניות"
         )
         if mode == "interpolation":
-            duration = 8
+            duration = 8  # עבור Interpolation נשאר 8 שניות
         
         resolution = st.selectbox(
             "רזולוציה",
