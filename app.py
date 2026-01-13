@@ -342,7 +342,11 @@ def main():
             
             if start_image_file:
                 processed_start, size_start = process_image(start_image_file, aspect_ratio, image_method, crop_position)
-                st.image(processed_start, caption=f"מעובדת: {size_start[0]}x{size_start[1]}", width=300)
+                st.image(
+                    processed_start,
+                    caption=f"מעובדת: {size_start[0]}x{size_start[1]}",
+                    use_column_width=True
+                )
             
             if mode == "interpolation":
                 end_image_file = st.file_uploader(
